@@ -11,6 +11,9 @@ var config = {
       port: 8080
    },
 	
+   resolve: {
+      extensions: ['.js', '.jsx']
+   },
    module: {
       loaders: [
          {
