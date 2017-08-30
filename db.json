@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "name": "first thing",
+      "isDeleted": false
+    },
+    {
+      "id": 2,
+      "name": "second thing",
+      "isDeleted": false
+    },
+    {
+      "id": 3,
+      "name": "third thing",
+      "isDeleted": false
+    },
+    {
+      "id": 4,
+      "name": "fourth thing",
+      "isDeleted": true
+    },
+    {
+      "id": 5,
+      "name": "fifth thing",
+      "isDeleted": false
+    },
+    {
+      "id": 6,
+      "name": "sixth thing",
+      "isDeleted": true
+    }
+  ]
+}

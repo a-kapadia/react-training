@@ -26,8 +26,13 @@ class AddList extends React.Component {
   render() {
     return (
       <div>
-        <input value={this.state.inputValue} onChange={(event) => { this.handleChange(event); }} />
-        <button onClick={() => this.addItem()} >Add</button>
+        <div id="user-input-box">
+          <input
+            value={this.state.inputValue}
+            onChange={(event) => { this.handleChange(event); }}
+          />
+          <button id="add" onClick={() => this.addItem()} >Add</button>
+        </div>
         <DisplayList item={this.state.item} />
       </div>
     );

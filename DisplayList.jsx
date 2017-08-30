@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import Display from './Display';
 
 class DisplayList extends React.Component {
   constructor(props) {
@@ -8,6 +8,20 @@ class DisplayList extends React.Component {
       list: [],
       query: 'all',
     };
+  }
+
+  componentWillMount() {
+    /*eslint-disable */
+    fetch('http://localhost:3000/lists')
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({
+          list: data,
+        });
+      });
+    /*eslint-enable */  
   }
 
   componentWillReceiveProps(nextProp) {
@@ -23,9 +37,22 @@ class DisplayList extends React.Component {
         return;
       }
     }
+
+    /*eslint-disable */
     if (item.name) {
       list.push(item);
+
+      fetch('http://localhost:3000/lists', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item),
+      });
     }
+
+    /*eslint-enable */
+
     this.setState({
       list,
     });
@@ -65,40 +92,6 @@ class DisplayList extends React.Component {
     );
   }
 }
-
-function Display(props) {
-  return (
-    <ul>
-    {
-      props.list.map((item, i) => {
-        const Element = (
-          <li
-            key={item.name}
-            className={item.isDeleted ? 'deleted' : 'active'}
-            onClick={() => { props.onClick(i); }}
-          >{item.name}</li>
-        );
-    
-        switch (props.query) {
-          case 'all':
-            return Element;
-          case 'active':
-            return (!item.isDeleted ? Element : null);
-          case 'finished':
-            return (item.isDeleted ? Element : null);
-          default:
-            return Element;
-        }
-      })
-    }
-    </ul>
-  );
-}
-
-Display.propTypes = {
-  list: propTypes.arrayOf.isRequired,
-  query: propTypes.string.isRequired,
-};
 
 export default DisplayList;
 
