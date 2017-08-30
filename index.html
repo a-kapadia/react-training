@@ -5,16 +5,138 @@
       <meta charset = "UTF-8">
       <title>React App</title>
       <style>
-      	.deleted {
-			color: #712121;
-			text-decoration: line-through;
-			cursor: pointer;
-		}
-		.active{
-			color: #215121;
-			text-decoration: none;
-			cursor: pointer;
-		}
+         body{
+            text-align: center;
+            background: #213141;
+         }
+         .deleted {
+            color: #712121;
+            text-decoration: line-through;
+            cursor: pointer;
+            background: white;
+            border: none;
+         }
+         .active{
+            color: #215121;
+            text-decoration: none;
+            cursor: pointer;
+            background: white;
+            border: none;
+         }
+         #app{
+            margin: auto;
+            margin-top: 20px;
+            width: 320px;
+            min-height: 150px;
+            background: white;
+            color: #414141;
+            border: 2px solid #616161;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px 0.1px black;
+         }
+         #user-input-box{
+            margin-top: 10px;
+            text-align: center;
+         }
+         input{
+            width: 257px;
+            height: 30px;
+            border: 2px solid #616161;
+            color: #515151;
+            box-shadow: none;
+            font-size: 16px;
+            padding-left: 5px;
+         }
+         input:focus{
+            outline: none;
+            border-color: #212121;
+            color: #313141;
+         }
+         #add{
+            width: 55px;
+            padding: 5px;
+            font-size: 16px;
+            height: 36px;
+            border: 2px solid #717171;
+            font-weight: 700;
+            background: none;
+            color: #414141;
+            margin-left: -2px;
+         }
+         #add:hover, #add:active{
+            color: #212121;
+            border-color: #212121;
+         }
+         #add:focus{
+            outline; none;
+         }
+         .button-bar{
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+         }
+         #all, #active, #finished{
+            width: 80px;
+            width: 33.3%;
+            height: 30px;
+            margin-bottom: -10px;
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+            color: white;
+            border: 1px solid #616161;
+            border-bottom: 1px dashed white;
+         }
+         #all{
+            border-radius: 10px 0 0 0;
+            background: #414151;
+         }
+         #finished{
+            border-radius: 0 10px 0 0;
+            background: #614141;
+         }
+         #active{
+            background: #415141;            
+         }
+         #all:hover{
+            border-color: #212161;
+            box-shadow:inset 1px 1px 5px 0.1px #212121;
+         }
+         #active:hover{
+            border-color: #416141;
+            box-shadow:inset 1px 1px 5px 0.1px #212121;
+         }
+         #finished:hover{
+            border-color: #814141;
+            box-shadow:inset 1px 1px 5px 0.1px #212121;
+         }
+         h3{
+            text-align: center;
+            border-bottom: 1px dashed rgba(255,255,255,0.8);
+            border-radius: 10px 10px 0 0;
+            padding: 10px;
+            background: #414151;
+            color: white;
+            font-weight: 700;
+            margin-top: 0px;
+         }
+         #todo{
+            border-radius: 0 0 0 0;
+         }
+         button:focus{
+            outline: none;
+         }
+         ul{
+            text-align:left;
+         }
+         .links{
+            text-decoration: none;
+            color: #616161;
+            font-weight: 600;
+         }
+         .links:hover{
+            color: #414151;
+         }
       </style>
    </head>
 

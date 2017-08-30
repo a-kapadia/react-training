@@ -1,0 +1,66 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "name": "first thing",
+      "isDeleted": false
+    },
+    {
+      "id": 2,
+      "name": "second thing",
+      "isDeleted": false
+    },
+    {
+      "id": 3,
+      "name": "third thing",
+      "isDeleted": false
+    },
+    {
+      "id": 4,
+      "name": "fourth thing",
+      "isDeleted": true
+    },
+    {
+      "id": 5,
+      "name": "fifth thing",
+      "isDeleted": false
+    },
+    {
+      "id": 6,
+      "name": "sixth thing",
+      "isDeleted": true
+    },
+    {
+      "name": "dhdgh",
+      "isDeleted": false,
+      "id": 7
+    },
+    {
+      "name": "arpit",
+      "isDeleted": false,
+      "id": 8
+    },
+    {
+      "name": "new item ",
+      "isDeleted": false,
+      "id": 9
+    },
+    {
+      "name": "something",
+      "isDeleted": false,
+      "id": 10
+    },
+    {
+      "name": "shingomet",
+      "isDeleted": false,
+      "id": 11
+    }
+  ]
+}

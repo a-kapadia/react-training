@@ -1,38 +1,16 @@
 import React from 'react';
-import DisplayList from './DisplayList';
+import { Switch, Route } from 'react-router-dom';
+import Display from './Display';
+import AddItem from './AddItem';
+import Home from './Home';
 
-class AddList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputValue: '',
-      item: '',
-    };
-  }
+const App = () => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route exact path="/add" component={AddItem} />
+    <Route exact path="/view" component={Display} />
+  </Switch>
+);
 
-  addItem() {
-    this.setState({
-      item: this.state.inputValue,
-      inputValue: '',
-    });
-  }
-
-  handleChange(change) {
-    this.setState({
-      inputValue: change.target.value,
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <input value={this.state.inputValue} onChange={(event) => { this.handleChange(event); }} />
-        <button onClick={() => this.addItem()} >Add</button>
-        <DisplayList item={this.state.item} />
-      </div>
-    );
-  }
-}
-
-export default AddList;
+export default App;
 
